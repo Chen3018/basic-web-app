@@ -13,9 +13,14 @@ export default function QueryProcessor(query: string): string {
     );
   }
 
+  const numbers = query.substring(8).split(' plus ');
   if (query.toLowerCase().includes("name")) {
     return (
       "chenjiaf"
+    );
+  } else if (query.toLowerCase().includes("plus")) {
+    return (
+      (Number(numbers[0]) + Number(numbers[1].substring(0, numbers[1].length - 1))).toString()
     );
   }
 
