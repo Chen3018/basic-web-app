@@ -41,7 +41,36 @@ export default function QueryProcessor(query: string): string {
     );
   }
 
- 
+  if (query.toLowerCase().includes("square")) {
+    const largest = query.substring(60).split(', ');
+    const list = [Number(largest[0]), Number(largest[1]), Number(largest[2]), Number(largest[3]), Number(largest[4]), Number(largest[5]), Number(largest[6].substring(0, largest[6].length - 1))];\
+    const r = (0).toString()
+    if (Math.sqrt(list[0]) % 1 == 0 && Math.cbrt(list[0]) % 1 == 0) {
+      const r = list[0].toString()
+    }
+    if (Math.sqrt(list[1]) % 1 == 0 && Math.cbrt(list[1]) % 1 == 0) {
+      const r = list[1].toString()
+    }
+    if (Math.sqrt(list[2]) % 1 == 0 && Math.cbrt(list[2]) % 1 == 0) {
+      const r = list[2].toString()
+    }
+    if (Math.sqrt(list[3]) % 1 == 0 && Math.cbrt(list[3]) % 1 == 0) {
+      const r = list[3].toString()
+    }
+    if (Math.sqrt(list[4]) % 1 == 0 && Math.cbrt(list[4]) % 1 == 0) {
+      const r = list[4].toString()
+    }
+    if (Math.sqrt(list[5]) % 1 == 0 && Math.cbrt(list[5]) % 1 == 0) {
+      const r = list[5].toString()
+    }
+    if (Math.sqrt(list[6]) % 1 == 0 && Math.cbrt(list[6]) % 1 == 0) {
+      const r = list[6].toString()
+    }
+
+    return (
+      r
+    );
+  }
 
   return "";
 }
