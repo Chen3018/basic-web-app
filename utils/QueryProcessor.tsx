@@ -28,7 +28,7 @@ export default function QueryProcessor(query: string): string {
 
   if (query.toLowerCase().includes("largest")) {
     const largest = query.substring(47).split(', ');
-    const list = [Number(largest[0]), Number(largest[1]), Number(largest[2])].sort();
+    const list = [Number(largest[0]), Number(largest[1]), Number(largest[2].substring(0, largest[2].length - 1))].sort();
     return (
       (list[-1]).toString()
     );
