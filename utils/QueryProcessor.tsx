@@ -28,9 +28,16 @@ export default function QueryProcessor(query: string): string {
 
   if (query.toLowerCase().includes("largest")) {
     const largest = query.substring(47).split(', ');
-    const list = [Number(largest[0]), Number(largest[1]), Number(largest[2])].sort()
+    const list = [Number(largest[0]), Number(largest[1]), Number(largest[2])].sort();
     return (
-      list[-1].toString()
+      (list[-1]).toString()
+    );
+  }
+
+  if (query.toLowerCase().includes("multiplied")) {
+    const numbers = query.substring(8).split(' multiplied by ');
+    return (
+      (Number(numbers[0]) * Number(numbers[1].substring(0, numbers[1].length - 1))).toString()
     );
   }
 
