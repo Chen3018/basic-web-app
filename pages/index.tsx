@@ -63,7 +63,8 @@ export default function Home() {
       <p>Prices:</p>
       <div>
         {priceList.map((p) => (
-          <div>{p}</div>
+          <div key={p}
+          >{p}</div>
         ))}
       </div>
 
