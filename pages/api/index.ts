@@ -3,7 +3,7 @@ import type { NextApiRequest, NextApiResponse } from "next";
 
 type Data = string;
 
-import QueryProcessor from "../../utils/QueryProcessor";
+import CalculatePrices from "../../utils/QueryProcessor";
 export default function handler(
   req: NextApiRequest,
   res: NextApiResponse<Data>
@@ -11,7 +11,7 @@ export default function handler(
   console.log(req.url);
   
   const query = req.query.q as string;
-  const response = QueryProcessor(query);
+  const response = CalculatePrices([], 0, 0);
 
-  res.status(200).send(response);
+  res.status(200).send("response");
 }
