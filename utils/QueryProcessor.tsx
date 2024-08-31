@@ -1,4 +1,4 @@
-export default function QueryProcessor(query: string): string {
+/*export default function QueryProcessor(query: string): string {
   if (query.toLowerCase().includes("shakespeare")) {
     return (
       "William Shakespeare (26 April 1564 - 23 April 1616) was an " +
@@ -43,7 +43,7 @@ export default function QueryProcessor(query: string): string {
 
   if (query.toLowerCase().includes("square")) {
     const largest = query.substring(60).split(', ');
-    const list = [Number(largest[0]), Number(largest[1]), Number(largest[2]), Number(largest[3]), Number(largest[4]), Number(largest[5]), Number(largest[6].substring(0, largest[6].length - 1))];\
+    const list = [Number(largest[0]), Number(largest[1]), Number(largest[2]), Number(largest[3]), Number(largest[4]), Number(largest[5]), Number(largest[6].substring(0, largest[6].length - 1))];
     const r = (0).toString()
     if (Math.sqrt(list[0]) % 1 == 0 && Math.cbrt(list[0]) % 1 == 0) {
       const r = list[0].toString()
@@ -73,4 +73,20 @@ export default function QueryProcessor(query: string): string {
   }
 
   return "";
+}*/
+
+export default function CalculatePrice(priceList: number[], preTax: number, postTax: number): number {
+  console.log(priceList);
+  console.log(preTax);
+  console.log(postTax);
+  if (priceList.length === 0 || preTax === 0 || postTax === 0) {
+    return 0;
+  }
+
+  var sum = 0;
+  for (var i = 0; i < priceList.length; i++) {
+    sum += priceList[i];
+  }
+
+  return (sum / preTax) * postTax;
 }
